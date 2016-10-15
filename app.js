@@ -23,7 +23,7 @@ app.get('/', function(req, res) {
   res.status(200).send('Web Request Successful!');
 });
 
-var port = 1337;
+var port = process.env.PORT || 5000;
 var httpServer = require('http').createServer(app);
 httpServer.listen(port, function() {
     console.log('changegamer platform running on port ' + port + '.');
