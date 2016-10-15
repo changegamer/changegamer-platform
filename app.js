@@ -20,7 +20,7 @@ var app = express();
 app.use('/parse', api);
 
 app.get('/', function(req, res) {
-  res.status(200).send('Web Request Successful!');
+  res.status(200).send('Web Request Successful! \n changegamer root entry point');
 });
 
 var port = process.env.PORT || 5000;
