@@ -3,8 +3,22 @@
   "version": "1.0.0",
   "description": "changegamer platform",
   "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:changegamer/changegamer-platform.git"
+  },
   "scripts": {
-    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "kerberos": "~0.0.x",
+    "parse": "~1.8.0",
+    "parse-server": "~2.2.12"
+  },
+  "engines": {
+    "node": ">=4.3"
   },
   "author": "Kenan Pulak",
   "license": "ISC"
