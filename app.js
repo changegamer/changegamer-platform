@@ -22,7 +22,7 @@ var api = new ParseServer({
     module: 'parse-server-mailgun',
     options: {
     // The address that your emails come from
-      fromAddress: 'Hive <noreply@change-gamer.com>',
+      fromAddress: 'The Hive <noreply@change-gamer.com>',
     // Your domain from mailgun.com
       domain: 'change-gamer.com',
     // Your API key from mailgun.com
