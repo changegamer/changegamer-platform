@@ -1,0 +1,6 @@
+Hi {{username}},
+
+Thanks for using The Hive.
+
+The Hive Team
+https://change-gamer.com

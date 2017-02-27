@@ -15,7 +15,8 @@
     "express": "^4.14.0",
     "kerberos": "~0.0.x",
     "parse": "~1.8.0",
-    "parse-server": "~2.2.12"
+    "parse-server": "~2.2.12",
+    "parse-server-mailgun": "^2.3.8"
   },
   "engines": {
     "node": ">=4.3"
