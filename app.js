@@ -1,6 +1,7 @@
 // Entry point into the node app
 console.log('Starting Parse Server...');
 
+const resolve = require('path').resolve;
 var express = require('express');
 var ParseServer = require('parse-server').ParseServer;
 var databaseUri = process.env.DATABASE_URI || process.env.MONGODB_URI;
@@ -28,22 +29,23 @@ var api = new ParseServer({
       templates: {
         passwordResetEmail: {
           subject: 'Reset your password',
-          pathPlainText: resolve(__dirname, 'path/to/templates/password_reset_email.txt'),
-          pathHtml: resolve(__dirname, 'path/to/templates/password_reset_email.html'),
+          pathPlainText: resolve(__dirname, 'email-templates/password_reset_email.txt'),
+          pathHtml: resolve(__dirname, 'email-templates/password_reset_email.html'),
           callback: (user) => { return { firstName: user.get('firstName') }}
         // Now you can use {{firstName}} in your templates
       },
         verificationEmail: {
           subject: 'Confirm your account',
-          pathPlainText: resolve(__dirname, 'path/to/templates/verification_email.txt'),
-          pathHtml: resolve(__dirname, 'path/to/templates/verification_email.html'),
+          pathPlainText: resolve(__dirname, 'email-templates/verification_email.txt'),
+          pathHtml: resolve(__dirname, 'email-templates/verification_email.html'),
           callback: (user) => { return { firstName: user.get('firstName') }}
           // Now you can use {{firstName}} in your templates
       },
-      customEmailAlert: {
-        subject: 'Urgent notification!',
-        pathPlainText: resolve(__dirname, 'path/to/templates/custom_alert.txt'),
-        pathHtml: resolve(__dirname, 'path/to/templates/custom_alert.html'),
+      welcomeEmailAlert: {
+        subject: 'Welcome to The Hive!',
+        pathPlainText: resolve(__dirname, 'email-templates/welcome_email.txt'),
+        pathHtml: resolve(__dirname, 'email-templates/welcome_email.html'),
+        }
       }
     }
   }
