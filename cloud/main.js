@@ -13,7 +13,7 @@ Parse.Cloud.afterSave(Parse.User, function(request) {
   const MailgunAdapter = AppCache.get(process.env.APP_ID)['userController']['adapter'];
 
   MailgunAdapter.send({
-    templateName: 'customEmailAlert',
+    templateName: 'welcomeEmailAlert',
     // Optional override of your configuration's subject
     subject: 'Welcome to The Hive!',
     // Optional override of the adapter's fromAddress
