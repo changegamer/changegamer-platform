@@ -16,6 +16,7 @@ var api = new ParseServer({
   fileKey: 'optionalFileKey',
   // Enable email verification
   verifyUserEmails: true,
+  appName: 'The Hive',
   emailAdapter: {
     module: 'parse-server-mailgun',
     options: {
