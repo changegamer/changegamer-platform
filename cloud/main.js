@@ -8,7 +8,8 @@ const { AppCache } = require('parse-server/lib/cache');
 
 Parse.Cloud.afterSave(Parse.User, function(request) {
 
-  var user = request.user;
+  console.log('request payload: ' + request);
+  //var user = request.user;
   const MailgunAdapter = AppCache.get(process.env.APP_ID)['userController']['adapter'];
 
   MailgunAdapter.send({
@@ -17,6 +18,6 @@ Parse.Cloud.afterSave(Parse.User, function(request) {
     subject: 'Welcome to The Hive!',
     // Optional override of the adapter's fromAddress
     fromAddress: 'The Hive <noreply@change-gamer.com>',
-    recipient: user.email
+    recipient: 'kepulak@gmail.com'
   });
 });
