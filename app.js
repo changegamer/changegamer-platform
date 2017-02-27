@@ -15,7 +15,7 @@ var api = new ParseServer({
   databaseURI: databaseUri || 'mongodb://localhost:27017/dev', //Connection string for your MongoDB database
   fileKey: 'optionalFileKey',
   // Enable email verification
-  verifyUserEmails: true,
+  //verifyUserEmails: true,
   appName: 'The Hive',
   publicServerURL: process.env.SERVER_URL +'/parse',
   emailAdapter: {
