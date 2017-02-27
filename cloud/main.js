@@ -8,7 +8,7 @@ const { AppCache } = require('parse-server/lib/cache');
 
 Parse.Cloud.afterSave(Parse.User, function(request) {
 
-  console.log('request payload: ' + request);
+  console.log('request payload user: ' + request.user);
   //var user = request.user;
   const MailgunAdapter = AppCache.get(process.env.APP_ID)['userController']['adapter'];
 
