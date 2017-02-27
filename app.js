@@ -17,6 +17,7 @@ var api = new ParseServer({
   // Enable email verification
   verifyUserEmails: true,
   appName: 'The Hive',
+  publicServerURL: process.env.SERVER_URL +'/parse',
   emailAdapter: {
     module: 'parse-server-mailgun',
     options: {
