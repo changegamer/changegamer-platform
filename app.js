@@ -43,10 +43,15 @@ var api = new ParseServer({
           callback: (user) => { return { firstName: user.get('firstName') }}
           // Now you can use {{firstName}} in your templates
       },
-      welcomeEmailAlert: {
-        subject: 'Welcome to The Hive!',
-        pathPlainText: resolve(__dirname, 'email-templates/welcome_email.txt'),
-        pathHtml: resolve(__dirname, 'email-templates/welcome_email.html'),
+        welcomeEmailAlert: {
+          subject: 'Welcome to The Hive!',
+          pathPlainText: resolve(__dirname, 'email-templates/welcome_email.txt'),
+          pathHtml: resolve(__dirname, 'email-templates/welcome_email.html'),
+        },
+        inviteCodeEmail: {
+          subject: 'You have been invited to The Hive!',
+          pathPlainText: resolve(__dirname, 'email-templates/invite_code_email.txt'),
+          pathHtml: resolve(__dirname, 'email-templates/invite_code_email.html'),
         }
       }
     }

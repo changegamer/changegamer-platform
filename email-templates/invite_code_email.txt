@@ -1,0 +1,6 @@
+Hi {{firstName}},
+
+Enter Invite Code: {{code}} To Join the Hive!
+
+The Hive Team
+https://change-gamer.com

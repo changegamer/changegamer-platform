@@ -1,6 +1,6 @@
 Hi {{username}},
 
-Thanks for using The Hive.
+Welcome to the Hive! Get started by adding your family members to The Hive!
 
 The Hive Team
 https://change-gamer.com
