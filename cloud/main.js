@@ -27,7 +27,7 @@ Parse.Cloud.afterSave("Invite", function(request) {
 
   var emailRecipient = request.object.get("email");
   if (emailRecipient) {
-    var verificationCode = request.object.get("verificationCode")
+    var verificationCode = request.object.get("code")
     var expirationDate = request.object.get("expirationDate")
     var firstName = request.object.get("firstName")
     const MailgunAdapter = AppCache.get(process.env.APP_ID)['userController']['adapter'];
